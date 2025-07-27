@@ -169,12 +169,38 @@
     <i class="fas fa-heart"></i>&nbsp;Locket
   </div>
 </button><br>
-        <button class="button" onclick="location.href='https://sf-static.upanhlaylink.com/img/image_202507272ce26ec82bd2831774b5b003b4b55745.jpg'">
+        <!-- Ảnh mã QR MB Bank -->
+<div style="text-align:center; margin: 20px 0;">
+  <img src="https://sf-static.upanhlaylink.com/img/image_202507272ce26ec82bd2831774b5b003b4b55745.jpg" alt="QR MB Bank" style="max-width:250px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2);">
+  <p style="color:#fff; font-family:'Lora',serif; font-size:16px;">Quét mã để thanh toán qua MB Bank</p>
+</div>
+
+<!-- Khung quét QR -->
+<div id="reader" style="width:300px; margin: 20px auto;"></div>
+
+<!-- Nút kích hoạt quét QR -->
+<button class="button" onclick="startScanner()">
   <div class="grid-container">
-    <img src="https://pay2s.vn/blog/wp-content/uploads/2024/10/thumbnail-logo-MBBank-1024x687.jpg" alt="MB Bank Logo" style="height:20px; vertical-align:middle; margin-right:5px;">
-    MB Bank QR
+    <i class="fas fa-camera"></i>&nbsp; Quét mã QR bằng camera
   </div>
 </button><br>
+
+<script src="https://unpkg.com/html5-qrcode"></script>
+<script>
+  function onScanSuccess(decodedText, decodedResult) {
+    alert(`✅ Mã QR đã quét: ${decodedText}`);
+  }
+
+  function startScanner() {
+    const html5QrCode = new Html5Qrcode("reader");
+    html5QrCode.start(
+      { facingMode: "environment" },
+      { fps: 10, qrbox: 250 },
+      onScanSuccess
+    );
+  }
+</script>
+
 
 </body>
 
