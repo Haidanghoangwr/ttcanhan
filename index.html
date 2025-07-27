@@ -222,41 +222,13 @@
   <div class="grid-container">
     <i class="fas fa-heart"></i>&nbsp;Locket
   </div>
-</button><br>
-        <!-- Nút chính -->
-<button class="button" onclick="showOptions()">
+        </button><br>
+<button class="button" onclick="location.href='https://sf-static.upanhlaylink.com/img/image_202507272ce26ec82bd2831774b5b003b4b55745.jpg'" style="display: flex; align-items: center; gap: 8px; padding: 12px 20px; background-color: #2a5d9f; color: white; border: none; border-radius: 8px; cursor: pointer;">
+  <img src="https://seeklogo.com/images/M/mb-bank-logo-09E7A87E3C-seeklogo.com.png" alt="MB Bank Logo" style="height: 24px;">
   <div class="grid-container">
-    <i class="fas fa-qrcode"></i> &nbsp; Thanh toán MB Bank
+    <i class="fas fa-heart"></i>&nbsp;MB Bank
   </div>
-</button>
-
-<!-- Hộp tùy chọn -->
-
-<div id="qrOptions" style="display:none; text-align:center; margin-top:15px;">
-  <button class="qr-sub-button" onclick="showQrImage()">Hiển thị mã QR</button>
-  <button class="qr-sub-button" onclick="startScanner()">Quét bằng camera</button>
-</div>
-
-<!-- Modal hiển thị QR -->
-<div id="qrModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img src="https://sf-static.upanhlaylink.com/img/image_202507272ce26ec82bd2831774b5b003b4b55745.jpg" alt="QR MB Bank" style="width:100%; border-radius:10px;">
-    <p style="font-weight:bold;">Quét mã để thanh toán</p>
-  </div>
-</div>
-
-<!-- Modal quét bằng camera -->
-<div id="scanModal" class="modal">
-  <div class="modal-content" style="width:320px;">
-    <span class="close" onclick="closeScanModal()">&times;</span>
-    <div id="reader" style="width:280px; margin:0 auto;"></div>
-    <p style="margin-top:10px; font-weight:bold;">Đưa mã QR vào camera để quét</p>
-    <div id="qrResult" style="margin-top:10px; color:green;"></div>
-  </div>
-</div>
-
-
+ </button><br>
 <script src="https://unpkg.com/html5-qrcode"></script>
 <script>
   function showOptions() {
