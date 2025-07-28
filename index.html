@@ -223,6 +223,31 @@
     <i class="fas fa-heart"></i>&nbsp;Locket
   </div>
         </button><br>
+        <!-- Nút kích hoạt QR MB Bank -->
+<button class="button" onclick="showQR()">  
+  <div class="grid-container">
+    <i class="fas fa-qrcode"></i>&nbsp;QR MB Bank
+  </div>
+</button>
+
+<!-- Hộp QR hiển thị giữa màn hình -->
+<div id="qrFloating" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%);
+  background:white; padding:20px; border-radius:15px; box-shadow:0px 0px 30px rgba(0,0,0,0.5); z-index:9999;">
+  <img src="https://sf-static.upanhlaylink.com/img/image_20250728c72fe1104bbd93637ed8dc151bbd4f34.jpg" alt="QR MB Bank" style="width:250px;">
+  <br><br>
+  <button class="button" onclick="hideQR()">Đóng</button>
+</div>
+
+<!-- JS xử lý hiển thị -->
+<script>
+  function showQR() {
+    document.getElementById("qrFloating").style.display = "block";
+  }
+  function hideQR() {
+    document.getElementById("qrFloating").style.display = "none";
+  }
+</script>
+
 <script src="https://unpkg.com/html5-qrcode"></script>
 <script>
   function showOptions() {
